@@ -10,6 +10,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import Counter from './containers/counter';
 import Controls from './containers/controls';
 import Users from './containers/users';
+import Gifs from './containers/gifs';
 import reducers from './reducers';
 import './style.scss';
 
@@ -49,6 +50,7 @@ const Nav = (props) => {
         <li><NavLink to="/users" exact>Users</NavLink></li>
         <li><NavLink to="/test/id1">test id1</NavLink></li>
         <li><NavLink to="/test/id2">test id2</NavLink></li>
+        <li><NavLink to="/gifs">Gifs</NavLink></li>
       </ul>
     </nav>
   );
@@ -64,6 +66,7 @@ const App = (props) => {
           <Route path="/nav" component={Nav} />
           <Route path="/users" component={Users} />
           <Route exact path="/test/:id" component={Test} />
+          <Route exact path="/gifs" component={Gifs} />
           <Route component={FallBack} />
         </Switch>
       </div>

@@ -4,12 +4,6 @@ import { withRouter } from 'react-router-dom';
 import { getResponse } from '../actions';
 
 class Users extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-  }
-
   componentDidMount() {
     this.props.getResponse();
   }
